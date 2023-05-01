@@ -28,7 +28,7 @@ This procedure is called as **Sigma Known** because for this procedure you have 
 
 3. **Normal distribution or large sample size:** The underlying population distribution should be normal. However, if the population distribution is not normal, the Central Limit Theorem can be applied when the sample size is large enough _(usually, n ≥ 30 is considered large enough)_. According to the Central Limit Theorem, the sampling distribution of the sample mean will approach a normal distribution as the sample size increases, regardless of the shape of the population distribution.
 
-### $$ \text{CI} = \bar{x} \pm Z_{\alpha/2} \times \frac{\sigma}{\sqrt{n}} $$
+$$ \text{CI} = \bar{x} \pm Z_{\alpha/2} \times \frac{\sigma}{\sqrt{n}} $$
 
 > Where, $\bar{x}$ is the sample mean, σ is the population standard deviation, n is the sample size, and Z is the critical value from the standard normal distribution.
 

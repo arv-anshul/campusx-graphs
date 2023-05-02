@@ -3,7 +3,7 @@
 [![Google Colab Badge](https://img.shields.io/badge/Notebook-F9AB00?logo=googlecolab&logoColor=fff&style=for-the-badge)](https://colab.research.google.com/drive/1Dorc5oX43Uh8CbA71KVd4IwfrC6XMeby?usp=sharing)
 [![Doc Badge](https://img.shields.io/badge/Read%20the%20Doc-8CA1AF?logo=readme&logoColor=fff&style=for-the-badge)](http://www.stat.yale.edu/Courses/1997-98/101/confint.htm)
 
-# Definitions
+## Definition
 
 **Confidence interval**, _in simple words,_ is a range of values within which we expect a particular
 population parameter, like a mean, to fall. It's a way to express the uncertainty around an
@@ -14,25 +14,7 @@ the true value lies within the interval.
 
 $$ \text{Confidence Interval} = \text{Point Estimate} \pm \text{Margin of Error} $$
 
-# Procedures to calculate Confidence Interval
-
-## Z-Procedure (Sigma Known)
-
-This procedure is called as **Sigma Known** because for this procedure you have given the **Population Standard Deviation** by default. Generally, population standard deviation is not given for analysis but to work with Z-Procedure you have already provided with Population Standard Deviation.
-
-### **The assumptions for using the Z-procedure in statistical analysis are:**
-
-1. **Random Sampling:** The data must be collected using a random sampling method to ensure that the sample is representative of the population. This helps to minimize biases and ensures that the results can be generalized to the entire population.
-
-2. **Known population standard deviation:** The population standard deviation (σ) must be known or accurately estimated. In practice, the sample standard deviation (s) is often used as an estimate, but if the sample size is large enough, the sample standard deviation can provide a reasonably accurate approximation.
-
-3. **Normal distribution or large sample size:** The underlying population distribution should be normal. However, if the population distribution is not normal, the Central Limit Theorem can be applied when the sample size is large enough _(usually, n ≥ 30 is considered large enough)_. According to the Central Limit Theorem, the sampling distribution of the sample mean will approach a normal distribution as the sample size increases, regardless of the shape of the population distribution.
-
-$$ \text{CI} = \bar{x} \pm Z_{\alpha/2} \times \frac{\sigma}{\sqrt{n}} $$
-
-> Where, $\bar{x}$ is the sample mean, σ is the population standard deviation, n is the sample size, and Z is the critical value from the standard normal distribution.
-
-# Interpreting Confidence Interval
+## Interpreting Confidence Interval
 
 A **confidence interval** is a _range of values within which a population parameter_, such as the population mean, is estimated to lie with a certain level of confidence. The confidence interval provides an indication of the precision and uncertainty associated with the estimate. To interpret the confidence interval values, consider the following points:
 

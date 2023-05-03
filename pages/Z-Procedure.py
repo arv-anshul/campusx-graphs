@@ -54,8 +54,10 @@ st.subheader(values_txt)
 # Plot the confidence interval
 fig, ax = plt.subplots(figsize=(10, 6))
 
-ax.bar(['Lower Limit', 'Upper Limit'], [lower_limit, upper_limit], color='lightblue')
-ax.plot(['Lower Limit', 'Upper Limit'], [lower_limit, upper_limit], color='red', linewidth=2)
+ax.bar(['Lower Limit', 'Upper Limit'], [
+       lower_limit, upper_limit], color='lightblue')
+ax.plot(['Lower Limit', 'Upper Limit'], [
+        lower_limit, upper_limit], color='red', linewidth=2)
 ax.axhline(sample_mean, color='green', linestyle='--', label='Sample Mean')
 
 ax.set_ylabel('Value')

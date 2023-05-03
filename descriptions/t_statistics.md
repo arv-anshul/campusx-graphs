@@ -23,7 +23,7 @@
 
 - **Independent observations:** The observations in the sample should be independent of each other. In other words, the value of one observation should not influence the value of another observation. This is particularly important when working with time series data or data with inherent dependencies.
 
-$$ \text{CI} = \bar{x} \pm t_{\alpha/2} \times \frac{s}{\sqrt{n}} $$
+$$ \text{CI} = \bar{x} \pm t\_{\alpha/2} \times \frac{s}{\sqrt{n}} $$
 
 ## Calculate CI using t-statistic
 

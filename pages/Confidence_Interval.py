@@ -91,4 +91,4 @@ st.write(
     utils.H2C % f'{n_interval} mean captured out of {n_sim} simulations',
     utils.H2C % f'About ({100*n_interval / n_sim:.2f}%)',
     unsafe_allow_html=True
-    )
+)

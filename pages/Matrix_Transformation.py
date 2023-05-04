@@ -15,6 +15,18 @@ st.set_page_config('Matrix Transformation', 'random', 'wide')
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
 # Some important variables
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
+matrix_latex = r"""
+    $$
+    \begin{bmatrix}
+    a_{11} & a_{12}\\a_{21} & a_{22}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    %s & %s\\%s & %s
+    \end{bmatrix}
+    $$
+"""
+
 text_kwarg = {
     'fontsize': 14,
     'fontweight': 800,
@@ -59,17 +71,21 @@ def transform_grid(matrix, grid_lines):
 with st.sidebar:
     st.title('Linear Transformation')
     matrix = np.zeros((2, 2), int)
-    matrix[0, 0] = st.number_input('Element (0, 0)', value=1, format='%d')
-    matrix[0, 1] = st.number_input('Element (0, 1)', value=0, format='%d')
-    matrix[1, 0] = st.number_input('Element (1, 0)', value=0, format='%d')
-    matrix[1, 1] = st.number_input('Element (1, 1)', value=1, format='%d')
+    l, r = st.columns(2)
+    matrix[0, 0] = l.number_input('Element (1, 1)', value=1, format='%d')
+    matrix[0, 1] = r.number_input('Element (1, 2)', value=0, format='%d')
+    matrix[1, 0] = l.number_input('Element (2, 1)', value=0, format='%d')
+    matrix[1, 1] = r.number_input('Element (2, 2)', value=1, format='%d')
 
+    st.markdown(matrix_latex % tuple(matrix.ravel()))
     to_show = st.radio('To  Show:', [None, 'Unit Vector', 'Mera Vector'])
 
     vec = np.zeros(2, int)
     if to_show == 'Mera Vector':
-        vec[0] = st.number_input('Vector X-coordinate', value=0, format='%d')
-        vec[1] = st.number_input('Vector y-coordinate', value=0, format='%d')
+        l,r = st.columns(2)
+        vec[0] = l.number_input('Vector X-coordinate', value=0, format='%d')
+        vec[1] = r.number_input('Vector y-coordinate', value=0, format='%d')
+        st.markdown("""$$\n(x, y) = (%s, %s)\n$$""" % tuple(vec))
 
     transform_button = st.button('**Transform**', use_container_width=True)
 
@@ -127,8 +143,8 @@ if transform_button:
         ax.text(trf_i[0], trf_i[1], 'i^', **text_kwarg)
         ax.text(trf_j[0], trf_j[1], 'j^', **text_kwarg)
 
-plt.text(0.02, 0.98, str(matrix), {'fontweight': 800},
-         transform=ax.transAxes, verticalalignment='top')
+# plt.text(0.02, 0.98, str(matrix), {'fontweight': 800},
+#          transform=ax.transAxes, verticalalignment='top')
 plt.title('Matrix Transformation')
 
 st.pyplot(fig, True, True)

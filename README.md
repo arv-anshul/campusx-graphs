@@ -1,5 +1,7 @@
 # CampusX Graphs
 
+[![Streamlit Badge](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=fff&style=for-the-badge)](https://arv-anshul-campusx-graphs-readme-z4ghxh.streamlit.app)
+
 This project combines different graphs [create by CampusX](https://github.com/campusx-official) for DSMP Course to teach some mathematics and statistics topics. I use their individual repo and combine to one Streamlit App which contains additional intuition regrading graphs or their topics.
 
 ## Graphs
